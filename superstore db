@@ -24,3 +24,20 @@ VALUES
     (13, 'Slow Cooker', 'Appliances', 49.95, 30, 4.7),
     (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
+
+#For this project, I used SQL to query the Superstore Database to get some information about items sold at the store and their prices.
+
+#Use a SELECT statement to order the items by price.
+SELECT item_name, price
+FROM superstore
+ORDER BY price desc;
+
+#Write a SQL query that will show the highest price item in the category of "Kitchen Supplies".
+SELECT category, MAX(price)
+FROM superstore
+WHERE category="Kitchen Supplies";
+
+#Write a SQL query to show how many air purifiers are in stock?
+SELECT category, item_name, stock_quantity
+FROM superstore
+WHERE item_name="Air Purifier";
